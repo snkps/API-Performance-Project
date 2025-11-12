@@ -7,23 +7,6 @@ The goal is to evaluate the **stability, speed, and reliability** of public APIs
 
 ---
 
-## Project Structure
-API-Performance-Project/
-├── Postman/
-│ ├── User_API_Tests.json
-│ │ └── # Postman collection with API requests (GET, POST)
-│ └── Api Testing User API Tests.xlsx
-│ └── # Excel table with test cases and expected results
-│
-├── JMeter/
-│ └── Thread Group.jmx
-│ └── # JMeter scenario for performance testing (1 vs 10 users)
-│
-└── Reports/
-└── Performance Testing Report.pdf
-└── # Final performance report with analysis and conclusions
----
-
 ## Tools and Technologies
 | Tool | Purpose |
 |------|----------|
