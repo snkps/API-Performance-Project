@@ -1,0 +1,300 @@
+{
+	"info": {
+		"_postman_id": "5969cf65-75ae-4ad0-91ef-cb4e20d7a219",
+		"name": "User API Tests",
+		"description": "\"Колекція для позитивних та негативних тестів створення користувачів через API\"EndFragment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49949533"
+	},
+	"item": [
+		{
+			"name": "GET Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/users",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST User - Olexandra",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Olexandra\",\r\n    \"username\": \"polyn123\",\r\n    \"email\": \"olexandra@example.com\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/users",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST User - Michae",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Michael\",\r\n  \"username\": \"mike456\",\r\n  \"email\": \"michael@example.com\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/users",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST User - Lindsay (empty email)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Lindsay\",\r\n  \"username\": \"lindsay789\",\r\n  \"email\": \"\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/users",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST User - Tobias (empty username)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Tobias\",\r\n  \"username\": \"\",\r\n  \"email\": \"tobias@example.com\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/users",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST User - VeryLongName",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"VeryLongName Olexandra\",\r\n  \"username\": \"superlongusername12345\",\r\n  \"email\": \"verylong@example.com\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "{{base_url}}/users",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST User - Empty Body",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{}\r\n"
+				},
+				"url": {
+					"raw": "{{base_url}}/users",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST User - Invalid JSON",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Olexandra\",\r\n  \"username\": \"polyn123\" \"email\": \"olexandra@example.com\"\r\n}\r\n\r\n"
+				},
+				"url": {
+					"raw": "{{base_url}}/users",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Users instead of POST",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/users",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE User instead of POST",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/users/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST User - Wrong URL",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Olexandra\",\r\n  \"username\": \"polyn123\",\r\n  \"email\": \"olexandra@example.com\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/users123",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"users123"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					"// Перевірка статусу відповіді\r",
+					"pm.test(\"Status code is 200\", function () {\r",
+					"    pm.response.to.have.status(200);\r",
+					"});\r",
+					"\r",
+					"pm.test(\"Status code is 201\", function () {\r",
+					"    pm.response.to.have.status(201);\r",
+					"});\r",
+					"\r",
+					"pm.test(\"Response has id field\", function () {\r",
+					"    var jsonData = pm.response.json();\r",
+					"    pm.expect(jsonData).to.have.property(\"id\");\r",
+					"});\r",
+					"\r",
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": ""
+		}
+	]
+}
